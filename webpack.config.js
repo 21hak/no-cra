@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         include: [path.resolve(__dirname, "src")],
-        use: ["babel-loader"],
+        use: ["ts-loader"],
       },
     ],
   },
@@ -29,7 +29,7 @@ module.exports = {
       template: path.resolve(__dirname, "public/index.html"),
     }),
   ],
-
+  devtool: "eval-source-map",
   devServer: {
     // 정적 파일 경로 설정
     static: path.join(__dirname, "public/"),
